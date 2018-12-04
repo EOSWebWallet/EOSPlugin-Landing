@@ -1,0 +1,80 @@
+html, body {
+  height: 100%;
+  background: $bg;
+	font-size: $fz;
+	font-family: $ff1;
+  min-width: $mw;
+  color: $tc;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.page-content {
+  flex: 1 0 auto;
+}
+.page-footer {
+  flex: 0 0 auto;
+}
+
+.clear{clear:both}
+img{max-width: 100%}
+input:focus, textarea:focus, button:focus {
+	outline: none;
+  box-shadow: none !important;
+}
+b, strong{font-weight: 600}
+em, i{font-style: italic}
+a, input[type=submit], button, select{
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+@media print {
+  .noprint {display: none;}
+  body {background:#FFF; color:#000;}
+  a {text-decoration: underline; color:#00F;}
+}
+
+.nowrap{white-space: nowrap}
+.no_bg{background: transparent}
+.underline{text-decoration: underline}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $ff2;
+}
+
+@media screen and (min-width: $xl) {
+  .container{
+    max-width: 1580px;
+  }
+}
+
+@media screen and (min-width: $lg) {
+  .container{
+    max-width: 90vw;
+  }
+}
+
+@media screen and (min-width: $md) {
+  .container{
+    max-width: 90vw;
+  }
+}
+
+@media screen and (min-width: $sm) {
+  .container{
+    max-width: 85vw;
+  }
+}
+
+@media screen and (min-width: $xs) {
+  .container{
+    max-width: 85vw;
+  }
+}

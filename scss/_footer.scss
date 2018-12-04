@@ -1,0 +1,102 @@
+.page-footer{
+	position: relative;
+	z-index: $z_index + 2;
+	&:after, &:before{
+		content: '';
+		position: absolute;
+	}
+	&:after{
+		width: 180px;
+		height: 204px;
+		bottom: 0;
+		right: 88%;
+		background: url('../img/points-blue.png') no-repeat;
+		background-size: cover;
+	}
+
+	&:before{
+		width: 204px;
+		height: 76px;
+		bottom: 0;
+		right: 26%;
+		background: url('../img/round.png') no-repeat;
+		background-size: cover;
+	}
+	.footer-wrapp{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.copyrate{
+			padding: 10px 0 15px;
+			color: $blue;
+			font-weight: 700;
+			width: calc(35% - 65px);
+			text-align: center;
+		}
+		.soc-icons{
+			.link{
+				display: inline-block;
+				min-width: 30px;
+				margin-left: 15px;
+				svg{
+					width: 30px;
+					height: 30px;
+					fill: #ffffff;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $xl) {
+		&:after{right: 92%}
+		&:before{right: 36%}
+		.footer-wrapp{
+			.copyrate{
+				width: calc(29vw - 65px);
+				margin-left: -3%;
+			}
+		}
+	}
+	@media screen and (max-width: $lg) {
+		padding-left: 10%;
+		&:after{right: 85%}
+		&:before{display: none}
+		.footer-wrapp{
+			.copyrate{
+				padding-left: 70px;
+				width: auto;
+				color: $tc;
+			}
+		}
+	}
+	@media screen and (max-width: $sm) {
+		padding-left: 15px;
+		&:after{display: none}
+		.footer-wrapp{
+			.copyrate{
+				padding-left: 0;
+			}
+			.soc-icons{
+			.link{
+				margin: 15px 0 15px 10px;
+			}
+		}
+		}
+	}
+	@media screen and (max-width: $xs) {
+		padding-left: 15px;
+		&:after{display: none}
+		.footer-wrapp{
+			.copyrate{
+				padding-left: 0;
+			}
+			.soc-icons{
+				width: 100px;
+				min-width: 100px;
+				text-align: right;
+			.link{
+				margin: 6px 0 6px 10px;
+			}
+		}
+		}
+	}
+}
